@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <img src="./img/bg.jpg" id="bg">
+        <img src="./img/moon.png" id="moon">
+        <img src="./img/mountain.png" id="mountain">
+        <img src="./img/road.png" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+    <div class="content">
+        <div class="box">
+        <h2>視差滾動</h2><br><br>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus corporis ipsam repudiandae aliquid et, minus vero ad aspernatur blanditiis doloremque, at, vitae dolor unde deleniti autem beatae voluptas in ut? Reprehenderit veniam omnis assumenda, tenetur voluptatum magni aut qui ut facere fuga neque natus totam mollitia vel iure blanditiis recusandae dolore voluptate, hic obcaecati illum repellendus? Et maiores dicta molestiae non commodi eius eos beatae ad? Sed obcaecati laudantium commodi quisquam! Aspernatur molestias consequuntur, saepe maxime quae culpa itaque, quos mollitia officiis veritatis doloribus. Eligendi culpa, quam quo doloremque, odio deleniti et commodi error incidunt, rerum impedit dolore aspernatur quibusdam provident harum dolorum quod tempora ad similique. Quis explicabo placeat similique aut? Neque voluptatem, ad culpa rem hic delectus non ipsa nemo labore architecto, minus suscipit dolor iusto, soluta quasi recusandae eius alias eum placeat error praesentium vero reiciendis qui voluptates. Nostrum distinctio quos enim ea sint asperiores molestiae nihil esse excepturi dignissimos velit eum quidem, repudiandae tempora, illum deleniti eius dicta? Impedit esse nesciunt dignissimos expedita quos at fuga ab possimus a odio saepe libero laboriosam, iure quo odit natus, quia architecto maxime exercitationem enim. Tenetur suscipit voluptatem, temporibus similique aliquid tempore quidem architecto esse quasi, porro ut, animi dolore error debitis saepe assumenda rerum veniam minus id et tempora mollitia sequi ducimus? Libero, neque quis. Eligendi quia qui dolore id sed omnis odio quibusdam ab ullam minima necessitatibus, assumenda nemo cum saepe ea voluptatum suscipit sequi tempore atque enim voluptatibus amet animi. Ullam distinctio, placeat temporibus, possimus quisquam iure nesciunt veritatis voluptas natus, molestias earum perferendis deleniti. Iusto velit sunt veritatis ea eveniet culpa, fugiat corporis hic provident, nostrum quis porro excepturi deserunt labore unde! Esse, earum odio pariatur possimus iusto fugit non, eos, obcaecati suscipit repudiandae voluptates. Fugit nemo porro vitae aperiam aut? Perspiciatis, non quis!</p><br><br>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus corporis ipsam repudiandae aliquid et, minus vero ad aspernatur blanditiis doloremque, at, vitae dolor unde deleniti autem beatae voluptas in ut? Reprehenderit veniam omnis assumenda, tenetur voluptatum magni aut qui ut facere fuga neque natus totam mollitia vel iure blanditiis recusandae dolore voluptate, hic obcaecati illum repellendus? Et maiores dicta molestiae non commodi eius eos beatae ad? Sed obcaecati laudantium commodi quisquam! Aspernatur molestias consequuntur, saepe maxime quae culpa itaque, quos mollitia officiis veritatis doloribus. Eligendi culpa, quam quo doloremque, odio deleniti et commodi error incidunt, rerum impedit dolore aspernatur quibusdam provident harum dolorum quod tempora ad similique. Quis explicabo placeat similique aut? Neque voluptatem, ad culpa rem hic delectus non ipsa nemo labore architecto, minus suscipit dolor iusto, soluta quasi recusandae eius alias eum placeat error praesentium vero reiciendis qui voluptates. Nostrum distinctio quos enim ea sint asperiores molestiae nihil esse excepturi dignissimos velit eum quidem, repudiandae tempora, illum deleniti eius dicta? Impedit esse nesciunt dignissimos expedita quos at fuga ab possimus a odio saepe libero laboriosam, iure quo odit natus, quia architecto maxime exercitationem enim. Tenetur suscipit voluptatem, temporibus similique aliquid tempore quidem architecto esse quasi, porro ut, animi dolore error debitis saepe assumenda rerum veniam minus id et tempora mollitia sequi ducimus? Libero, neque quis. Eligendi quia qui dolore id sed omnis odio quibusdam ab ullam minima necessitatibus, assumenda nemo cum saepe ea voluptatum suscipit sequi tempore atque enim voluptatibus amet animi. Ullam distinctio, placeat temporibus, possimus quisquam iure nesciunt veritatis voluptas natus, molestias earum perferendis deleniti. Iusto velit sunt veritatis ea eveniet culpa, fugiat corporis hic provident, nostrum quis porro excepturi deserunt labore unde! Esse, earum odio pariatur possimus iusto fugit non, eos, obcaecati suscipit repudiandae voluptates. Fugit nemo porro vitae aperiam aut? Perspiciatis, non quis!</p>
+
+    </div>
+    </div>
+    
+    <script>
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + "px";
+            moon.style.left = -value * 0.5 + "px";
+            mountain.style.top = -value * 0.15 + "px";
+            road.style.top = value * 0.15 + "px";
+            text.style.top = value * 1 + "px";
+        })
+    </script>
+</body>
+</html>
